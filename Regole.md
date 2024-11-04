@@ -1,16 +1,14 @@
 # Regole Protocollo CHAT
-
-- PORTA 3645
-- Inserisce i dati l'utente (nickname)
+- Il server apre il socket sulla **PORTA 3645** e aspetta che un client si connetta
+- Alla connessione di un client crea un *thread*
+- Il thread sta in ascolto con la seguente casistica -->
+- "!", l'utente desidera interrompere la comunicazione, chiudendo il socket ("/quit")
+- "@", l'utente desidera cambiare nickname ("/change")
+- "?", l'utente desidera la lista di tutti i comandi ("/help")
+- "*", l'utente desidera la lista di tutti gli utenti connessi, il server scriverà una stringa unica contenente ogni nickname diviso da una virgola  ("/list")
+- ??? "#", l'utente desidera entrare in chat privata con un altro utente ("/msg"), nel caso l'utente specificato non esista, il server scrive "nf", altrimenti "fn"
+- ??? "%", l'utente desidera tornare in chat pubblica ("/pb")
+- Nel caso il messaggio sia diverso da uno di questi, il server deve inviare il messaggio in broadcast a tutti gli altri thread per farlo visualizzare agli utenti.
 - Bisogna creare un array di socket e associare l'username ad un thread (socket, username)
 - Quando un utente manda un messaggio sulla chat pubblica, sopra il messaggio appare il nome dell'utente che l'ha scritto
-- "/quit" => per uscire dalla comunicazione("Utente disconnesso dalla chat"), al server arriva "!"
-- "/change" => per cambiare username corrente, al server arriva "@"
-- "/help" => per avere la lista dei comandi disponibili, al server arriva "?"
-- "/list" => per avere la lista di utenti connessi, al server arriva "*"
-- ??? "/msg" => per andare nella chat privata con un utente, al server arriva "#"
-- ??? "/pb" => per tornare alla chat pubblica, al server arriva "%"
 - ??? Funzione AntiFlood per mutare gli utenti che spammano troppi messaggi
-- 
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?A783745487A8C5CA2E7BDB42C2337721D59C
