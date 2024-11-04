@@ -1,5 +1,5 @@
 # RegoleProtocollo
 
-. Prima regola
-. Seconda regola
+- Prima regola
+- Seconda regola
 
