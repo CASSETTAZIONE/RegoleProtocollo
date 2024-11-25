@@ -5,6 +5,9 @@
 - Alla connessione di un client, il server crea un **thread dedicato** per gestire in modo indipendente la comunicazione con l'utente.
 - Ogni thread gestisce i comandi del client, inviando o ricevendo messaggi e dati senza interrompere le altre connessioni.
 
+- Alla connessione l'utente insersisce il Nickname.
+- Qualunque cosa scriva viene mandata nella chat pubblica a tutti gli altri client connessi.
+
 ## 2. Comandi
 
 ### Comandi di Controllo
