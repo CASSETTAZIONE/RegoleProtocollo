@@ -1,6 +1,6 @@
 # Protocollo di Comunicazione CHAT
 
-## 1. Configurazione del Server
+## 1. Configurazione iniziale
 - Il server apre un **socket** sulla **PORTA 3645** e rimane in ascolto per connessioni.
 - Alla connessione di un client, il server crea un **thread dedicato** per gestire in modo indipendente la comunicazione con l'utente.
 - Ogni thread gestisce i comandi del client, inviando o ricevendo messaggi e dati senza interrompere le altre connessioni.
