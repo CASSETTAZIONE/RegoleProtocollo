@@ -42,13 +42,7 @@
   - Il **nickname dell’autore** per permettere l'identificazione dell'utente.
   - La **visualizzazione in tempo reale** degli aggiornamenti a tutti gli utenti.
 
-## 4. Funzione AntiFlood
-- **Monitoraggio della Frequenza dei Messaggi**: Il server rileva se un utente invia troppi messaggi in un breve intervallo di tempo.
-- **Muting Automatico**: Se un utente supera una soglia predefinita di messaggi, il server attiva automaticamente un blocco temporaneo per impedirgli di inviare ulteriori messaggi (muting).
-  - Il blocco viene rimosso automaticamente dopo un periodo di cooldown.
-  - Gli altri utenti non sono informati del muting, per mantenere la riservatezza e garantire un ambiente ordinato.
-
-## 5. Errori e Risposte del Server
+## 4. Errori e Risposte del Server
 - **Utente Non Trovato**: Se un utente tenta di entrare in chat privata con un nickname non valido, il server risponde con il messaggio `"nf"` (not found).
 - **Conferma Chat Privata**: Se l'utente specificato esiste, il server risponde con `"fn"` (found) e stabilisce la comunicazione privata.
 - **Errore di Comando Non Riconosciuto**: Se il comando inserito non è riconosciuto, il server invia un messaggio di errore che invita l'utente a utilizzare `"/help"` per la lista dei comandi validi.
